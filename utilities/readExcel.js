@@ -8,9 +8,7 @@ const getCredentialsJson = () => {
         header: { rows: 1 },
         sheets: ["credentials"],
         columnToKey: {
-            A: "key",
-            B: "username",
-            C: "password",
+            "*": "{{columnHeader}}",
         },
     });
 
@@ -23,11 +21,7 @@ const getItemsJson = () => {
         header: { rows: 1 },
         sheets: ["itemData"],
         columnToKey: {
-            A: "key",
-            B: "itemName",
-            C: "itemId",
-            D: "price",
-            E: "quantity",
+            "*": "{{columnHeader}}",
         },
     });
 
