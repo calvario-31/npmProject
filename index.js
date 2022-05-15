@@ -8,7 +8,8 @@ console.log(persona.apellido);
 console.log(persona.email);
 console.log(persona.telefono);
 
-console.log(getCredentialsJson());
+const credentialsJson = getCredentialsJson();
+console.log(credentialsJson);
 
 const credentialsMap = getCredentialsMap();
 const glitchCredentials = credentialsMap.get("glitch");
