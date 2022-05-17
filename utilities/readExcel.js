@@ -1,4 +1,4 @@
-import excelToJson from "convert-excel-to-json";
+const excelToJson = require("convert-excel-to-json");
 
 const excelPath = "./resources/testData.xlsx";
 
@@ -28,4 +28,4 @@ const getItemsJson = () => {
     return json.itemData;
 };
 
-export { getCredentialsJson, getItemsJson };
+module.exports = { getCredentialsJson, getItemsJson };

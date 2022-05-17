@@ -1,4 +1,4 @@
-import { getCredentialsJson, getItemsJson } from "./readExcel.js";
+const { getCredentialsJson, getItemsJson } = require("./readExcel");
 
 const getCredentialsMap = () => {
     const map = new Map();
@@ -22,4 +22,4 @@ const getItemsMap = () => {
     return map;
 };
 
-export { getCredentialsMap, getItemsMap };
+module.exports = { getCredentialsMap, getItemsMap };

@@ -1,6 +1,6 @@
-import { getPersona } from "./utilities/fakerProvider.js";
-import { getCredentialsJson, getItemsJson } from "./utilities/readExcel.js";
-import { getCredentialsMap, getItemsMap } from "./utilities/mapParser.js";
+const { getPersona } = require("./utilities/fakerProvider");
+const { getCredentialsJson, getItemsJson } = require("./utilities/readExcel");
+const { getCredentialsMap, getItemsMap } = require("./utilities/mapParser");
 
 const printSeparator = () => {
     console.log();

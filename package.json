@@ -1,16 +1,15 @@
 {
-  "name": "proyectonpm",
-  "version": "1.0.0",
-  "description": "proyecto npm para practicar",
-  "main": "./src/index.js",
-  "type": "module",
-  "scripts": {
-    "test": "test"
-  },
-  "author": "calvario31",
-  "license": "ISC",
-  "devDependencies": {
-    "@faker-js/faker": "^6.3.1",
-    "convert-excel-to-json": "^1.7.0"
-  }
+    "name": "proyectonpm",
+    "version": "1.0.0",
+    "description": "proyecto npm para practicar",
+    "main": "./src/index.js",
+    "scripts": {
+        "test": "test"
+    },
+    "author": "calvario31",
+    "license": "ISC",
+    "devDependencies": {
+        "@faker-js/faker": "^6.3.1",
+        "convert-excel-to-json": "^1.7.0"
+    }
 }
