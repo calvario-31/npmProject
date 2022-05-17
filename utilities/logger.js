@@ -11,6 +11,7 @@ const logger = pino({
             singleLine: true,
             ignore: "pid,hostname",
             translateTime: "SYS:yyyy-mm-dd HH:MM:ss.l",
+            mkdir: "true",
         },
     },
 });
@@ -26,6 +27,7 @@ const loggerDebug = pino({
             singleLine: true,
             ignore: "pid,hostname",
             translateTime: "SYS:yyyy-mm-dd HH:MM:ss.l",
+            mkdir: "true",
         },
     },
 });
