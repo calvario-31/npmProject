@@ -1,50 +1,51 @@
 const { getPersona } = require("./utilities/fakerProvider");
 const { getCredentialsJson, getItemsJson } = require("./utilities/readExcel");
 const { getCredentialsMap, getItemsMap } = require("./utilities/mapParser");
+const { log } = require("./utilities/logger");
 
 const printSeparator = () => {
-    console.log();
-    console.log("========================================");
-    console.log();
+    log.info("");
+    log.info("========================================");
+    log.info("");
 };
 
 printSeparator();
 const persona = getPersona();
-console.log(persona.nombre);
-console.log(persona.apellido);
-console.log(persona.email);
-console.log(persona.telefono);
+log.info(persona.nombre);
+log.info(persona.apellido);
+log.info(persona.email);
+log.info(persona.telefono);
 
 printSeparator();
 const credentialsJson = getCredentialsJson();
-console.log(credentialsJson);
+log.info(JSON.stringify(credentialsJson, null, 2));
 
 printSeparator();
 const itemJson = getItemsJson();
-console.log(itemJson);
+log.info(JSON.stringify(itemJson, null, 2));
 
 printSeparator();
 const credentialsMap = getCredentialsMap();
 const glitchCredentials = credentialsMap.get("glitch");
-console.log(`Username for glitched: ${glitchCredentials.username}`);
-console.log(`Password for glitched: ${glitchCredentials.password}`);
+log.info(`Username for glitched: ${glitchCredentials.username}`);
+log.info(`Password for glitched: ${glitchCredentials.password}`);
 
 printSeparator();
 const lockedCredentials = credentialsMap.get("locked");
-console.log(`Username for locked: ${lockedCredentials.username}`);
-console.log(`Password for locked: ${lockedCredentials.password}`);
+log.info(`Username for locked: ${lockedCredentials.username}`);
+log.info(`Password for locked: ${lockedCredentials.password}`);
 
 printSeparator();
 const itemsMap = getItemsMap();
 const bikeItem = itemsMap.get("bike");
-console.log(`Name for bikeItem: ${bikeItem.itemName}`);
-console.log(`Id for bikeItem: ${bikeItem.itemId}`);
-console.log(`Price for bikeItem: ${bikeItem.price}`);
-console.log(`Quantity for bikeItem: ${bikeItem.quantity}`);
+log.info(`Name for bikeItem: ${bikeItem.itemName}`);
+log.info(`Id for bikeItem: ${bikeItem.itemId}`);
+log.info(`Price for bikeItem: ${bikeItem.price}`);
+log.info(`Quantity for bikeItem: ${bikeItem.quantity}`);
 
 printSeparator();
 const shirtItem = itemsMap.get("shirt");
-console.log(`Name for shirtItem: ${shirtItem.itemName}`);
-console.log(`Id for shirtItem: ${shirtItem.itemId}`);
-console.log(`Price for shirtItem: ${shirtItem.price}`);
-console.log(`Quantity for shirtItem: ${shirtItem.quantity}`);
+log.info(`Name for shirtItem: ${shirtItem.itemName}`);
+log.info(`Id for shirtItem: ${shirtItem.itemId}`);
+log.info(`Price for shirtItem: ${shirtItem.price}`);
+log.info(`Quantity for shirtItem: ${shirtItem.quantity}`);

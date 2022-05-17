@@ -1,6 +1,8 @@
 const { getCredentialsJson, getItemsJson } = require("./readExcel");
+const { log } = require("./logger");
 
 const getCredentialsMap = () => {
+    log.debug("Getting credentials map");
     const map = new Map();
     const credentialsJson = getCredentialsJson();
 
@@ -12,6 +14,7 @@ const getCredentialsMap = () => {
 };
 
 const getItemsMap = () => {
+    log.debug("Getting items map");
     const map = new Map();
     const itemsJson = getItemsJson();
 
