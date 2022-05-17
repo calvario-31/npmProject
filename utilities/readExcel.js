@@ -1,7 +1,7 @@
 const excelToJson = require("convert-excel-to-json");
 const { log } = require("./logger");
 
-const excelPath = "./resources/testData.xlsx";
+const excelPath = "./resources/testdata/testData.xlsx";
 
 const getCredentialsJson = () => {
     log.debug("Getting credentials json from excel");
